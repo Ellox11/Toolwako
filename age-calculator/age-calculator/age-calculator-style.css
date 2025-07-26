@@ -1,0 +1,159 @@
+/* --- CSS Variables & Base Styles (Consistent with other pages) --- */
+:root {
+    --primary-color: #007bff;
+    --primary-hover-color: #0056b3;
+    --background-color: #f8f9fa;
+    --card-background: #ffffff;
+    --text-color: #343a40;
+    --heading-color: #212529;
+    --border-color: #dee2e6;
+    --error-color: #dc3545;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+    --border-radius: 12px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Poppins', sans-serif; background-color: var(--background-color); color: var(--text-color); }
+.container { max-width: 700px; margin: 0 auto; padding: 0 20px; }
+
+/* --- Header & Footer (Consistent) --- */
+header, footer { text-align: center; }
+header { background-color: var(--card-background); padding: 15px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+.logo { font-size: 1.5rem; font-weight: 700; color: var(--primary-color); text-decoration: none; }
+footer { background-color: var(--heading-color); color: var(--background-color); padding: 20px 0; margin-top: 60px; }
+footer a { color: var(--background-color); }
+
+/* --- Tool Section --- */
+.tool-section { padding: 60px 0; }
+.tool-header { text-align: center; margin-bottom: 40px; }
+.tool-header h1 { font-size: 2.8rem; color: var(--heading-color); }
+.tool-header p { font-size: 1.1rem; }
+
+/* --- Age Calculator Container --- */
+.age-calculator-container {
+    background: var(--card-background);
+    padding: 30px 40px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+}
+
+.input-section {
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+.input-section h4 { font-size: 1.2rem; margin-bottom: 20px; color: var(--heading-color); }
+
+.input-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+.input-group input {
+    width: 100px;
+    padding: 12px;
+    font-size: 1.2rem;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+.input-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+/* Hide number input spinners for a cleaner look */
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+input[type=number] { -moz-appearance: textfield; }
+
+#calculate-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 30px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+#calculate-btn:hover {
+    background-color: var(--primary-hover-color);
+    transform: translateY(-2px);
+}
+#calculate-btn svg { width: 18px; height: 18px; }
+
+.error-message {
+    color: var(--error-color);
+    margin-top: 15px;
+    font-size: 0.9rem;
+    height: 20px; /* Reserve space to prevent layout shift */
+}
+
+/* --- Result Section --- */
+.result-section {
+    display: none; /* Initially hidden */
+    animation: fadeInUp 0.5s ease-out;
+}
+.result-section.visible {
+    display: block;
+}
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+.result-display {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    margin-bottom: 30px;
+}
+.result-value {
+    display: block;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+.result-display label {
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+.summary-display h4 { text-align: center; margin-bottom: 15px; color: var(--heading-color); }
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px 20px;
+    font-size: 1rem;
+}
+.summary-grid > div {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+.summary-grid label { font-weight: 600; }
+
+/* --- Ad & FAQ Section --- */
+.ads-section { padding: 40px 0; }
+.ad-placeholder { display: flex; align-items: center; justify-content: center; height: 100px; width: 100%; background-color: #e9ecef; border: 1px dashed var(--border-color); border-radius: var(--border-radius); }
+.ad-text { color: #6c757d; font-size: 1rem; }
+
+.faq-section { padding-top: 20px; }
+.section-title { text-align: center; font-size: 2.2rem; color: var(--heading-color); margin-bottom: 20px; }
+.faq-item { background: var(--card-background); padding: 20px; border-radius: 8px; border: 1px solid var(--border-color); margin-bottom: 15px; }
+.faq-item h3 { margin-bottom: 10px; font-size: 1.2rem; }
+
+/* --- Responsive --- */
+@media (max-width: 480px) {
+    .tool-header h1 { font-size: 2rem; }
+    .age-calculator-container { padding: 20px; }
+    .input-group { gap: 10px; }
+    .input-group input { width: 30%; font-size: 1rem; }
+    .result-value { font-size: 2.2rem; }
+}
