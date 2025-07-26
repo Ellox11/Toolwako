@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>BMI Calculator - Check Your Body Mass Index | ToolVerse</title>
+    <meta name="description" content="Use our free and accurate BMI calculator to check your Body Mass Index. Works with both metric (kg, cm) and imperial (lbs, ft, in) units. Get instant results and understand your health status.">
+    <meta name="keywords" content="bmi calculator, body mass index, check bmi, bmi chart, bmi formula, free bmi calculator, online tool">
+    <meta name="author" content="ToolVerse">
+    <link rel="canonical" href="https://yourwebsite.com/bmi-calculator">
+
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com/bmi-calculator">
+    <meta property="og:title" content="BMI Calculator - Check Your Body Mass Index | ToolVerse">
+    <meta property="og:description" content="Free and accurate BMI calculator for both metric and imperial units.">
+    <meta property="og:image" content="https://yourwebsite.com/assets/og-image-bmi.png">
+
+    <!-- Twitter Meta Tags -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yourwebsite.com/bmi-calculator">
+    <meta property="twitter:title" content="BMI Calculator - Check Your Body Mass Index | ToolVerse">
+    <meta property="twitter:description" content="Free and accurate BMI calculator for both metric and imperial units.">
+    <meta property="twitter:image" content="https://yourwebsite.com/assets/og-image-bmi.png">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="container">
+            <a href="/" class="logo">ToolVerse</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="tool-section">
+            <div class="container">
+                <div class="tool-header">
+                    <h1>BMI Calculator</h1>
+                    <p>Check your Body Mass Index to assess your health.</p>
+                </div>
+                
+                <div class="bmi-calculator-container">
+                    <!-- Unit Selector -->
+                    <div class="unit-selector">
+                        <input type="radio" id="metric" name="unit" value="metric" checked>
+                        <label for="metric">Metric (kg, cm)</label>
+                        <input type="radio" id="imperial" name="unit" value="imperial">
+                        <label for="imperial">Imperial (lbs, ft, in)</label>
+                    </div>
+
+                    <!-- Input Fields -->
+                    <div class="input-area">
+                        <div id="metric-inputs" class="input-group">
+                            <div>
+                                <label for="height-cm">Height (cm)</label>
+                                <input type="number" id="height-cm" placeholder="e.g., 180">
+                            </div>
+                            <div>
+                                <label for="weight-kg">Weight (kg)</label>
+                                <input type="number" id="weight-kg" placeholder="e.g., 75">
+                            </div>
+                        </div>
+                        <div id="imperial-inputs" class="input-group" style="display: none;">
+                            <div class="height-imperial">
+                                <label>Height</label>
+                                <input type="number" id="height-ft" placeholder="ft">
+                                <input type="number" id="height-in" placeholder="in">
+                            </div>
+                            <div>
+                                <label for="weight-lbs">Weight (lbs)</label>
+                                <input type="number" id="weight-lbs" placeholder="e.g., 165">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button id="calculate-btn">Calculate BMI</button>
+                    <p id="error-message" class="error-message"></p>
+
+                    <!-- Result Section -->
+                    <div id="result-section" class="result-section" style="display: none;">
+                        <h3>Your BMI is:</h3>
+                        <p class="bmi-value" id="bmi-value">22.5</p>
+                        <p class="bmi-category" id="bmi-category">Normal weight</p>
+                        <div class="bmi-gauge">
+                            <div class="gauge-bar">
+                                <div class="bar-section underweight"></div>
+                                <div class="bar-section normal"></div>
+                                <div class="bar-section overweight"></div>
+                                <div class="bar-section obese"></div>
+                            </div>
+                            <div id="bmi-indicator" class="gauge-indicator"></div>
+                            <div class="gauge-labels">
+                                <span>18.5</span>
+                                <span>25</span>
+                                <span>30</span>
+                            </div>
+                        </div>
+                        <p class="result-info">A healthy BMI range is between <strong>18.5 and 24.9</strong>.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ad Section -->
+        <section class="ads-section container">
+            <div class="ad-placeholder">
+                <span class="ad-text">Advertisement</span>
+            </div>
+        </section>
+
+        <!-- SEO Content Section -->
+        <section class="faq-section container">
+            <h2 class="section-title">Understanding BMI</h2>
+            <div class="faq-item">
+                <h3>What is BMI?</h3>
+                <p>Body Mass Index (BMI) is a value derived from the mass (weight) and height of a person. It is a simple tool used to categorize individuals as underweight, normal weight, overweight, or obese. It helps give a general idea of whether you have a healthy body weight for your height.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Limitations of BMI</h3>
+                <p>While BMI is a useful indicator, it does not distinguish between fat and muscle mass. Therefore, muscular individuals (like athletes) may have a high BMI but low body fat. It's best used as one of several tools to assess health, not as a sole diagnostic measure.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 ToolVerse. All Rights Reserved. | <a href="/">Home</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
