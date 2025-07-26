@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>Free Image Compressor - Reduce Image Size Online | ToolVerse</title>
+    <meta name="description" content="A fast, free, and secure online image compressor. Reduce the file size of your JPG, PNG, and WEBP images without losing quality. No upload required.">
+    <meta name="keywords" content="image compressor, reduce image size, optimize images, photo compressor, jpg compressor, png compressor, free tool">
+    <meta name="author" content="ToolVerse">
+    <link rel="canonical" href="https://yourwebsite.com/image-compressor">
+
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com/image-compressor">
+    <meta property="og:title" content="Free Image Compressor - Reduce Image Size Online | ToolVerse">
+    <meta property="og:description" content="A fast, free, and secure online image compressor.">
+    <meta property="og:image" content="https://yourwebsite.com/assets/og-image-compressor.png">
+
+    <!-- Twitter Meta Tags -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yourwebsite.com/image-compressor">
+    <meta property="twitter:title" content="Free Image Compressor - Reduce Image Size Online | ToolVerse">
+    <meta property="twitter:description" content="A fast, free, and secure online image compressor.">
+    <meta property="twitter:image" content="https://yourwebsite.com/assets/og-image-compressor.png">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="container">
+            <a href="/" class="logo">ToolVerse</a>
+            <!-- You can add other navigation links here -->
+        </nav>
+    </header>
+
+    <main>
+        <section class="tool-section">
+            <div class="container">
+                <div class="tool-header">
+                    <h1>Online Image Compressor</h1>
+                    <p>Reduce the file size of your images quickly and easily, right in your browser.</p>
+                </div>
+                
+                <div class="compressor-container">
+                    <!-- 1. Upload Area -->
+                    <div id="upload-area" class="upload-area">
+                        <div class="upload-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 16.5V9.75m0 0l-3.75 3.75M12 9.75l3.75 3.75M3 17.25V8.25c0-1.12.93-2.037 2.07-1.936a4.5 4.5 0 014.28 4.28c.023 1.141-.836 2.07-1.936 2.07H5.25" />
+                            </svg>
+                        </div>
+                        <p class="upload-text">Drag & Drop your Image Here</p>
+                        <p class="upload-or">or</p>
+                        <label for="file-input" class="btn btn-primary">Select Image</label>
+                        <input type="file" id="file-input" accept="image/jpeg, image/png, image/webp" hidden>
+                    </div>
+
+                    <!-- 2. Preview & Settings Area -->
+                    <div id="preview-area" class="preview-area" style="display: none;">
+                        <img id="image-preview" src="#" alt="Image Preview">
+                        <div class="settings">
+                            <div class="quality-control">
+                                <label for="quality-slider">Quality: <span id="quality-value">80</span>%</label>
+                                <input type="range" id="quality-slider" min="10" max="100" value="80">
+                            </div>
+                            <button id="compress-btn" class="btn btn-primary">Compress Image</button>
+                        </div>
+                    </div>
+
+                    <!-- 3. Result Area -->
+                    <div id="result-area" class="result-area" style="display: none;">
+                        <div class="result-stats">
+                            <div>
+                                <span class="label">Original Size</span>
+                                <span id="original-size" class="value"></span>
+                            </div>
+                            <div>
+                                <span class="label">Compressed Size</span>
+                                <span id="compressed-size" class="value"></span>
+                            </div>
+                            <div>
+                                <span class="label">Reduction</span>
+                                <span id="reduction-percent" class="value reduction"></span>
+                            </div>
+                        </div>
+                        <div class="result-actions">
+                            <a id="download-btn" class="btn btn-primary" download="compressed-image.jpg">Download Image</a>
+                            <button id="reset-btn" class="btn btn-secondary">Compress Another</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Loading Spinner -->
+                    <div id="loader" class="loader" style="display: none;"></div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Ad Section -->
+        <section class="ads-section container">
+            <div class="ad-placeholder">
+                <span class="ad-text">Advertisement</span>
+                <!-- Your ad network code (e.g., Google AdSense) goes here -->
+            </div>
+        </section>
+
+        <!-- FAQ Section for SEO -->
+        <section class="faq-section container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>Is this tool secure?</h3>
+                    <p>Absolutely. Your images are never uploaded to our servers. All compression is performed locally in your browser, ensuring your privacy is 100% protected.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What image formats are supported?</h3>
+                    <p>Our tool works with the most common web formats: JPEG, PNG, and WEBP. The output will be in JPEG format to ensure the best compression ratios.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Is there a file size limit?</h3>
+                    <p>There are no hard limits enforced by our tool. However, performance may vary depending on your device's processing power for extremely large images (e.g., > 20MB).</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 ToolVerse. All Rights Reserved. | <a href="/">Home</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
