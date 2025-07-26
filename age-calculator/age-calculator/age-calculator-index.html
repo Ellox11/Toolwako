@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>Accurate Age Calculator - Find Your Age in Years, Months & Days | ToolVerse</title>
+    <meta name="description" content="Calculate your exact chronological age online. Our free age calculator tells you your age in years, months, days, and even total weeks, hours, and seconds.">
+    <meta name="keywords" content="age calculator, calculate age, date of birth calculator, how old am I, online age calculator, free tool">
+    <meta name="author" content="ToolVerse">
+    <link rel="canonical" href="https://yourwebsite.com/age-calculator">
+
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com/age-calculator">
+    <meta property="og:title" content="Accurate Age Calculator - Find Your Age Online | ToolVerse">
+    <meta property="og:description" content="Find your exact age in years, months, days, and more with our fast and free online tool.">
+    <meta property="og:image" content="https://yourwebsite.com/assets/og-image-age.png">
+
+    <!-- Twitter Meta Tags -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yourwebsite.com/age-calculator">
+    <meta property="twitter:title" content="Accurate Age Calculator - Find Your Age Online | ToolVerse">
+    <meta property="twitter:description" content="Find your exact age in years, months, days, and more with our fast and free online tool.">
+    <meta property="twitter:image" content="https://yourwebsite.com/assets/og-image-age.png">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="container">
+            <a href="/" class="logo">ToolVerse</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="tool-section">
+            <div class="container">
+                <div class="tool-header">
+                    <h1>Age Calculator</h1>
+                    <p>Enter your date of birth to find out your exact age.</p>
+                </div>
+                
+                <div class="age-calculator-container">
+                    <div class="input-section">
+                        <h4>Enter your Date of Birth</h4>
+                        <div class="input-group">
+                            <input type="number" id="day-input" placeholder="DD" min="1" max="31">
+                            <input type="number" id="month-input" placeholder="MM" min="1" max="12">
+                            <input type="number" id="year-input" placeholder="YYYY" min="1900">
+                        </div>
+                        <button id="calculate-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                            </svg>
+                            Calculate Age
+                        </button>
+                        <p id="error-message" class="error-message"></p>
+                    </div>
+
+                    <div id="result-section" class="result-section">
+                        <div class="result-display">
+                            <div>
+                                <span id="years-output" class="result-value">--</span>
+                                <label>Years</label>
+                            </div>
+                            <div>
+                                <span id="months-output" class="result-value">--</span>
+                                <label>Months</label>
+                            </div>
+                            <div>
+                                <span id="days-output" class="result-value">--</span>
+                                <label>Days</label>
+                            </div>
+                        </div>
+                        <div class="summary-display">
+                            <h4>Summary</h4>
+                            <div class="summary-grid">
+                                <div><label>Total Months:</label><span id="total-months-output">--</span></div>
+                                <div><label>Total Weeks:</label><span id="total-weeks-output">--</span></div>
+                                <div><label>Total Days:</label><span id="total-days-output">--</span></div>
+                                <div><label>Total Hours:</label><span id="total-hours-output">--</span></div>
+                                <div><label>Total Minutes:</label><span id="total-minutes-output">--</span></div>
+                                <div><label>Total Seconds:</label><span id="total-seconds-output">--</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ad Section -->
+        <section class="ads-section container">
+            <div class="ad-placeholder">
+                <span class="ad-text">Advertisement</span>
+            </div>
+        </section>
+
+        <!-- FAQ Section for SEO -->
+        <section class="faq-section container">
+            <h2 class="section-title">Common Questions</h2>
+            <div class="faq-item">
+                <h3>How is the age calculated?</h3>
+                <p>Our calculator determines the time difference between your date of birth and the current date. It accurately accounts for leap years and the varying number of days in each month to give you a precise result in years, months, and days.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Is this age calculator accurate?</h3>
+                <p>Yes, the algorithm is designed to be highly accurate for calculating chronological age. It provides the same results you would get from a manual calculation that properly handles calendar complexities.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 ToolVerse. All Rights Reserved. | <a href="/">Home</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
